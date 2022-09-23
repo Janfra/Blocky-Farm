@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private CharacterController playerController;
-    [SerializeField] private float speed;
+    [SerializeField] private MoveStats stats;
     private Vector3 direction;
 
     void Update()
@@ -23,8 +22,8 @@ public class Movement : MonoBehaviour
 
     private void Move()
     {
-        transform.position += direction * speed * Time.fixedDeltaTime;
-        Debug.Log($"Current move should be: {direction * speed * Time.fixedDeltaTime}");
+        transform.position += direction * stats.speed * Time.fixedDeltaTime;
+        Debug.Log($"Current move should be: {direction * stats.speed * Time.fixedDeltaTime}");
     }
 
     private void GetPlayersInput()
