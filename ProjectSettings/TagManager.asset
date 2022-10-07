@@ -11,6 +11,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Interactable
+  - Bullets
+  - Entities
   - 
   - 
   - 
@@ -33,11 +36,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - RotationPlane
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 635405191
     locked: 0
