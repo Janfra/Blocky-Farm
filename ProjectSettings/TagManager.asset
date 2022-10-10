@@ -8,9 +8,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BlockBorder
   - Water
   - UI
+  - Resource
+  - 
+  - Bullets
+  - Interactable
+  - 
+  - 
+  - Entities
   - 
   - 
   - 
@@ -29,15 +36,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - RotationPlane
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 635405191
     locked: 0
