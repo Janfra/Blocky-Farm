@@ -5,23 +5,21 @@ using UnityEngine;
 public class CameraHandler : MonoBehaviour
 {
     [SerializeField] private Transform playerPos;
+    private const float yOffset = 25f;
+    private const float zOffset = 20f;
 
-    #region Constants
-
-    private const float yOffset = 35f;
-    private const float zOffset = 40f;
-
-    #endregion
+    // Start is called before the first frame update
+    void Start()
+    {
+    
+    }
 
     private void LateUpdate()
     {
         FollowPlayer();
         transform.LookAt(playerPos);
     }
-    
-    /// <summary>
-    /// Sets transform to follow the player at the constants offset distance.
-    /// </summary>
+
     private void FollowPlayer()
     {
         transform.position = new Vector3(playerPos.position.x, playerPos.position.y + yOffset, playerPos.position.z - zOffset);

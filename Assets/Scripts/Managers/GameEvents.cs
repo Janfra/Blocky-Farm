@@ -7,7 +7,9 @@ public class GameEvents : MonoBehaviour
 {
     public static GameEvents instance;
 
-    private void Awake()                 
+    public static event Action<ItemData> OnItemCollected;
+
+    private void Awake()
     {
         if(instance == null)
         {
