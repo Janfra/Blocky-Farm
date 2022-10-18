@@ -5,19 +5,22 @@ using UnityEngine;
 
 public class GameEvents : MonoBehaviour
 {
-    public static GameEvents instance;
+    // Testing
+    public Transform playerPos;
+    public static event Action<Transform> FollowPlayer;
 
-    public static event Action<ItemData> OnItemCollected;
-
-    private void Awake()
+    private void Awake()                 
     {
-        if(instance == null)
+
+    }
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
+            FollowPlayer?.Invoke(playerPos);
         }
     }
+
 }
